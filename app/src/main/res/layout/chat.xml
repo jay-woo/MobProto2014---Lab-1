@@ -5,21 +5,21 @@
 
     <TextView
         android:id="@+id/usernameView"
-        android:textSize="50sp"
+        android:textSize="20sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true" />
 
     <TextView
         android:id="@+id/chatView"
-        android:textSize="25sp"
+        android:textSize="15sp"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/usernameView" />
 
     <TextView
         android:id="@+id/timeView"
-        android:textSize="20sp"
+        android:textSize="15sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true" />

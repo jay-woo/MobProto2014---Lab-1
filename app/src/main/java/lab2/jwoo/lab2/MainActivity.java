@@ -3,14 +3,19 @@ package lab2.jwoo.lab2;
 import android.app.Activity;
 import android.app.ActionBar;
 import android.app.Fragment;
+import android.content.DialogInterface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.os.Build;
-
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.view.View.OnClickListener;
 
 
 public class MainActivity extends Activity {
@@ -25,7 +30,6 @@ public class MainActivity extends Activity {
                     .commit();
         }
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
