@@ -1,4 +1,4 @@
-MobProto2014---Lab-2
+MobProto2014---Lab-1
 ====================
 
-Lab 2 for the MobProto OSS
+Lab 1 for the MobProto OSS
