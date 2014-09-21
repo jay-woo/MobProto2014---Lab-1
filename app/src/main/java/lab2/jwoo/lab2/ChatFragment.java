@@ -25,7 +25,9 @@ public class ChatFragment extends Fragment {
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
-        ListView myListView = (ListView) rootView.findViewById(R.id.chatbox);
+        final ListView myListView = (ListView) rootView.findViewById(R.id.chatbox);
+        final ChatAdapter myChatAdapter = new ChatAdapter(getActivity(), this.chatItems);
+        myListView.setAdapter(myChatAdapter);
 
         Button sendButton = (Button) rootView.findViewById(R.id.sendbutton);
         final EditText textBox = (EditText) rootView.findViewById(R.id.textbox);
@@ -34,11 +36,11 @@ public class ChatFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 chatItems.add(new ChatItem("me", textBox.getText().toString(), "today"));
+                myChatAdapter.notifyDataSetChanged();
+                myListView.setSelection(chatItems.size() - 1);
                 textBox.setText("");
             }
         });
-
-        myListView.setAdapter(new ChatAdapter(getActivity(), this.chatItems));
 
         return rootView;
     }
